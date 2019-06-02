@@ -1,0 +1,6 @@
+---
+- name: Copy package to remote server
+  copy: src=/repository/apps/example.war dest=/tmp
+ 
+- name: Deploy application
+  jboss: deploy_path=/middleware/example-jboss-instance/deployments src=/tmp/example.war deployment=example.war state=present

@@ -1,0 +1,6 @@
+- hosts: all
+  tasks:
+    - authorized_key:
+        user: jota
+        state: present
+        key: "{{ lookup('file', '/home/jota/.ssh/id_rsa.pub') }}"
