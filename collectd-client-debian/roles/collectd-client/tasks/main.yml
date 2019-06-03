@@ -1,0 +1,6 @@
+---
+- name: Install Collectd
+  yum: name=collectd state=present
+
+- name: Copy Collectd configuration
+  template: src=collectd.conf dest=/etc/collectd
